@@ -7,37 +7,63 @@
         <h1>TODO</h1>
         <div class="main-box">
             <header class="box-header">
-                <input type="button" value="↓" class="hider-button">
+                <button class="check-button">
+                    Check all
+                </button>
                 <input placeholder="What needs to be done" class="main-input">
             </header>
-            <section class="todo-list">
-                <div class="todo-thing">
+            <ul class="todo-list">
+                <li class="todo-thing">
                     <input type="checkbox" class="done-checkbox">
                     HTML
-                </div>
-                <div class="todo-thing">
+                    <button class="delete-button">
+                        Delete
+                    </button>
+                    <input class="edit-todo-thing" value="HTML" hidden="hidden">
+                </li>
+                <li class="todo-thing">
                     <input type="checkbox" class="done-checkbox">
                     CSS
-                </div>
-                <div class="todo-thing">
+                    <button class="delete-button">
+                        Delete
+                    </button>
+                    <input class="edit-todo-thing" value="CSS" hidden="hidden">
+                </li>
+                <li class="todo-thing">
                     <input type="checkbox" class="done-checkbox">
                     JS
-                </div>
-                <div class="todo-thing">
+                    <button class="delete-button">
+                        Delete
+                    </button>
+                    <input class="edit-todo-thing" value="JS" hidden="hidden">
+                </li>
+                <li class="todo-thing">
                     <input type="checkbox" class="done-checkbox">
                     JS tools
-                </div>
-            </section>
+                    <button class="delete-button">
+                        Delete
+                    </button>
+                    <input class="edit-todo-thing" value="JS Tools" hidden="hidden">
+                </li>
+            </ul>
             <footer class="box-footer">
                 <span class="footer-sign">
                     3 items left
                 </span>
                 <span class="selector">
-                    <input class="active-button" type="button" value="All">
-                    <input class="button" type="button" value="Active">
-                    <input class="button" type="button" value="Completed">
+                    <button class="active-button">
+                        All
+                    </button>
+                    <button class="button">
+                        Active
+                    </button>
+                    <button class="button">
+                        Completed
+                    </button>
                 </span>
-                <input class="button" type="button" value="Clear completed">
+                <button class="button">
+                    Clear completed
+                </button>
             </footer>
         </div>
     </body>
