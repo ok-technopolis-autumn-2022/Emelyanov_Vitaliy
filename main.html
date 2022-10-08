@@ -19,7 +19,6 @@
                     <button class="delete-button" lang="en">
                         Delete
                     </button>
-                    <input class="edit-todo-thing" value="HTML" hidden="hidden">
                 </li>
                 <li class="todo-thing">
                     <input type="checkbox" class="done-checkbox">
@@ -27,7 +26,6 @@
                     <button class="delete-button" lang="en">
                         Delete
                     </button>
-                    <input class="edit-todo-thing" value="CSS" hidden="hidden">
                 </li>
                 <li class="todo-thing">
                     <input type="checkbox" class="done-checkbox">
@@ -35,7 +33,6 @@
                     <button class="delete-button" lang="en">
                         Delete
                     </button>
-                    <input class="edit-todo-thing" value="JS" hidden="hidden">
                 </li>
                 <li class="todo-thing">
                     <input type="checkbox" class="done-checkbox">
@@ -43,7 +40,6 @@
                     <button class="delete-button" lang="en">
                         Delete
                     </button>
-                    <input class="edit-todo-thing" value="JS Tools" hidden="hidden">
                 </li>
             </ul>
             <footer class="box-footer">
@@ -51,15 +47,9 @@
                     3 items left
                 </span>
                 <span class="selector">
-                    <button class="active-button">
-                        All
-                    </button>
-                    <button class="button">
-                        Active
-                    </button>
-                    <button class="button">
-                        Completed
-                    </button>
+                    <input type="radio" name="tasks-selector-radio" value="all"> All
+                    <input type="radio" name="tasks-selector-radio" value="active"> Active
+                    <input type="radio" name="tasks-selector-radio" value="completed"> Completed
                 </span>
                 <button class="button">
                     Clear completed
