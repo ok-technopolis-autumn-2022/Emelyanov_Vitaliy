@@ -7,51 +7,70 @@
         <h1>TODO</h1>
         <div class="main-box">
             <header class="box-header">
-                <button class="check-button">
-                    Check all
+                <button class="check-button" aria-label="Mark everything as done">
+                    Check all 
                 </button>
-                <input placeholder="What needs to be done" class="main-input">
+                <input
+                    placeholder="What needs to be done"
+                    class="main-input"
+                    aria-label="Input what to do">
             </header>
-            <ul class="todo-list" lang="ru">
-                <li class="todo-thing">
-                    <input type="checkbox" class="done-checkbox">
-                    HTML
-                    <button class="delete-button" lang="en">
-                        Delete
-                    </button>
-                </li>
-                <li class="todo-thing">
-                    <input type="checkbox" class="done-checkbox">
-                    CSS
-                    <button class="delete-button" lang="en">
-                        Delete
-                    </button>
-                </li>
-                <li class="todo-thing">
-                    <input type="checkbox" class="done-checkbox">
-                    JS
-                    <button class="delete-button" lang="en">
-                        Delete
-                    </button>
-                </li>
-                <li class="todo-thing">
-                    <input type="checkbox" class="done-checkbox">
-                    JS tools
-                    <button class="delete-button" lang="en">
-                        Delete
-                    </button>
-                </li>
-            </ul>
+            <main>
+                <ul class="todo-list" lang="ru" aria-label="List of things to do">
+                    <li class="todo-thing" aria-label="Todo - HTML">
+                        <input type="checkbox" class="done-checkbox" aria-label="Mark 'HTML' as done">
+                        HTML
+                        <button class="delete-button" lang="en" aria-label="Delete 'HTML' task">
+                            Delete
+                        </button>
+                    </li>
+                    <li class="todo-thing" aria-label="Todo - CSS">
+                        <input type="checkbox" class="done-checkbox" aria-label="Mark 'CSS' as done">
+                        CSS 
+                        <button class="delete-button" lang="en" aria-label="Delete 'CSS' task">
+                            Delete
+                        </button>
+                    </li>
+                    <li class="todo-thing" aria-label="Todo - JS">
+                        <input type="checkbox" class="done-checkbox" aria-label="Mark 'JS' as done">
+                        JS
+                        <button class="delete-button" lang="en" aria-label="Delete 'JS' task">
+                            Delete
+                        </button>
+                    </li>
+                    <li class="todo-thing" aria-label="Todo - JS tools">
+                        <input type="checkbox" class="done-checkbox" aria-label="Mark 'JS tools' as done">
+                        JS tools
+                        <button class="delete-button" lang="en" aria-label="Delete 'JS tools' task">
+                            Delete
+                        </button>
+                    </li>
+                </ul>
+            </main>
             <footer class="box-footer">
                 <span class="footer-sign">
                     3 items left
                 </span>
                 <span class="selector">
-                    <input type="radio" name="tasks-selector-radio" value="all"> All
-                    <input type="radio" name="tasks-selector-radio" value="active"> Active
-                    <input type="radio" name="tasks-selector-radio" value="completed"> Completed
+                    <input 
+                        type="radio" 
+                        name="tasks-selector-radio"
+                        value="all"
+                        aria-label="Show all task"> 
+                    All
+                    <input
+                        type="radio"
+                        name="tasks-selector-radio"
+                        value="active"
+                        aria-label="Show only active tasks">
+                    Active
+                    <input type="radio"
+                        name="tasks-selector-radio"
+                        value="completed"
+                        aria-label="Show only completed tasks"> 
+                    Completed
                 </span>
-                <button class="button">
+                <button class="button" aria-label="Delete all completed tasks">
                     Clear completed
                 </button>
             </footer>
