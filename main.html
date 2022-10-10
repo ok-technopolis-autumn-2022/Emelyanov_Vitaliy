@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
         <title>Test</title>
     </head>
     <body>
@@ -51,20 +52,24 @@
                 <span class="footer-sign">
                     3 items left
                 </span>
-                <span class="selector">
+                <span class="selector" role="tablist" aria-label="Select what tasks to show">
                     <input 
                         type="radio" 
+                        role="tab"
                         name="tasks-selector-radio"
                         value="all"
                         aria-label="Show all task"> 
                     All
                     <input
                         type="radio"
+                        role="tab"
                         name="tasks-selector-radio"
                         value="active"
                         aria-label="Show only active tasks">
                     Active
-                    <input type="radio"
+                    <input 
+                        type="radio"
+                        role="tab"
                         name="tasks-selector-radio"
                         value="completed"
                         aria-label="Show only completed tasks"> 
