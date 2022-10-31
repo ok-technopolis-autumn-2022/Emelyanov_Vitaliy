@@ -46,11 +46,14 @@ h1 {
 }
 
 .check-button {
-    background-image: url('../static/select-all.png');
-    background-size: cover;
-    width: 26px;
-    height: 13px;
-    margin: 24px;
+    background-image: url('../static/select-all@2x.png');
+    background-size: 24px 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    margin: 0px;
+    border: 0px;
     padding: 0px;
     background-color: white;
     border: none;
@@ -98,6 +101,27 @@ li:hover {
     height: 40px;
     border: 1px solid #F0F0F0;
     border-radius: 50%;
+    margin-right: 18px;
+    
+
+}
+
+.checkbox-image:hover {
+    filter: grayscale(1);
+}
+
+.todo-thing-string {
+    margin: 0px;
+    padding: 0px;
+    width: 450px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    margin-right: auto;
+}
+
+.todo-thing-string:hover {
+    text-overflow: scroll;
 }
 
 .delete-button {
@@ -116,24 +140,34 @@ li:hover .delete-button {
 
 }
 
+.delete-button:focus {
+    background-image: url(../static/close.png);
+
+}
+
 .delete-button-text {
     display: none;
 }
 
 input[type="checkbox"]:checked+.checkbox-image {
-    background-image: url("../static/completed.png");
+    background-image: url("../static/completed@2x.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 24px;
+    margin-right: 18px;
     /*background-size: 24px;*/
     border: 1px solid #5DC2AF;
 }
 
 input[type="checkbox"]:hover + .checkbox-image {
     border: 1px solid #CCC;
+
 }
 
 input[type="checkbox"] {
     appearance: none;
+    margin: 0px;
+
 }
 
 input[type="radio"] {
@@ -143,7 +177,6 @@ input[type="radio"] {
 
 input[type="radio"]:checked + .radio-label {
     border: 1px solid #EBDFDF;
-    border-radius: 10%;
     /*display: none;*/
     /*appearance: none;*/
 }
@@ -151,7 +184,8 @@ input[type="radio"]:checked + .radio-label {
 .radio-label {
     width: 44px;
     height: 21px;
-
+    border: 1px solid transparent;
+    border-radius: 10%;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
