@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ok-technopolis-autumn-2022/Emelyanov_Vitaliy#readme",
   "devDependencies": {
+    "parcel": "^2.7.0",
     "prettier": "2.7.1"
   }
 }
