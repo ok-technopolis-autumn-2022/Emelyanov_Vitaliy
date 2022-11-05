@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+$color-of-background: #f0f0f0;
+$main-font-family: "Roboto";
+
 html,
 body {
   height: 100%;
@@ -7,7 +11,7 @@ body {
 html {
   display: table;
   margin: auto;
-  background-color: #f0f0f0;
+  background-color: $color-of-background;
 }
 
 body {
@@ -18,7 +22,7 @@ body {
 
 h1 {
   text-align: center;
-  font-family: "Roboto";
+  font-family: $main-font-family;
   font-style: normal;
   font-weight: 100;
   font-size: 100px;
@@ -64,12 +68,13 @@ h1 {
 
 .main-input {
   width: 500px;
-  font-family: "Roboto";
+  font-family: $main-font-family;
   font-style: italic;
   font-weight: 300;
   font-size: 24px;
   line-height: 21px;
   box-shadow: inset 0px -1px 0px #e6e6e6;
+
   border: none;
 }
 
@@ -111,6 +116,7 @@ li:hover {
   width: 450px;
   overflow: hidden;
   text-overflow: ellipsis;
+
   margin-right: auto;
 }
 
@@ -139,7 +145,7 @@ li:hover .delete-button {
   display: none;
 }
 
-input[type=checkbox]:checked + .checkbox-image {
+input[type="checkbox"]:checked + .checkbox-image {
   background-image: url("../static/completed@2x.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -149,20 +155,20 @@ input[type=checkbox]:checked + .checkbox-image {
   border: 1px solid #5dc2af;
 }
 
-input[type=checkbox]:hover + .checkbox-image {
+input[type="checkbox"]:hover + .checkbox-image {
   border: 1px solid #ccc;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   appearance: none;
   margin: 0px;
 }
 
-input[type=radio] {
+input[type="radio"] {
   appearance: none;
 }
 
-input[type=radio]:checked + .radio-label {
+input[type="radio"]:checked + .radio-label {
   border: 1px solid #ebdfdf;
   /*display: none;*/
   /*appearance: none;*/
@@ -173,7 +179,7 @@ input[type=radio]:checked + .radio-label {
   height: 21px;
   border: 1px solid transparent;
   border-radius: 10%;
-  font-family: "Roboto";
+  font-family: $main-font-family;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -196,11 +202,12 @@ input[type=radio]:checked + .radio-label {
 
 .clear-button {
   background-position: center;
-  font-family: "Roboto";
+  font-family: $main-font-family;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
+
   display: flex;
   margin-top: -12px;
   width: 125px;
@@ -232,5 +239,3 @@ input[type=radio]:checked + .radio-label {
   z-index: -2;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
-/*# sourceMappingURL=main.css.map */
