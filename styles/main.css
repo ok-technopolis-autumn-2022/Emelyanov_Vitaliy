@@ -211,15 +211,18 @@ input[type="radio"]:checked + .radio-label {
 }
 
 .clear-button {
+    background-position: center;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
     line-height: 21px;
 
-    /* identical to box height, or 150% */
     display: flex;
-
+    margin-top: -12px;
+    width: 125px;
+    padding-top: 12px;
+    height: 50px;
     color: #888888;
     background-color: transparent;
     border: none;
