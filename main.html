@@ -3,6 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <link rel="stylesheet" href="styles/main.css" />
+    <script src="index.js" defer></script>
     <title>Test</title>
   </head>
   <body>
@@ -12,15 +13,17 @@
         <button class="check-button" aria-label="Mark everything as done">
           <span class="check-button-sign"> Check all </span>
         </button>
-        <input
-          placeholder="What needs to be done"
-          class="main-input"
-          aria-label="Input what to do"
-        />
+        <form class="main-input-form">
+            <input
+                placeholder="What needs to be done"
+                class="main-input"
+                aria-label="Input what to do"
+            />
+        </form>
       </header>
       <main>
         <ul class="todo-list" lang="ru" aria-label="List of things to do">
-          <li class="todo-thing" aria-label="Todo - HTML">
+         <!--  <li class="todo-thing" aria-label="Todo - HTML">
             <input
               type="checkbox"
               class="done-checkbox"
@@ -87,11 +90,11 @@
             >
               <span class="delete-button-text">Delete</span>
             </button>
-          </li>
+          </li> -->
         </ul>
       </main>
       <footer class="box-footer">
-        <span class="footer-sign"> 3 items left </span>
+        <span class="footer-sign"> 0 items left </span>
         <span
           class="selector"
           role="tablist"
