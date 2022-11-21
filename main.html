@@ -1,104 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-        <link rel="stylesheet" href="styles/main.css">
-        <title>Test</title>
-    </head>
-    <body>
-        <h1>todos</h1>
-        <div class="main-box">
-            <header class="box-header">
-                <button class="check-button" aria-label="Mark everything as done">
-                  <span class="check-button-sign">
-                    Check all 
-                  </span>
-                </button>
-                <input
-                    placeholder="What needs to be done"
-                    class="main-input"
-                    aria-label="Input what to do">
-            </header>
-            <main>
-                <ul class="todo-list" lang="ru" aria-label="List of things to do">
-                    <li class="todo-thing" aria-label="Todo - HTML">
-                        <input type="checkbox" class="done-checkbox" id="checkbox-1" aria-label="Mark 'HTML' as done">
-                        <label for="checkbox-1" class="checkbox-image"></label>
-                        <span class="todo-thing-string">
-                            HTML
-                        </span>
-                        <button class="delete-button" lang="en" aria-label="Delete 'HTML' task">
-                        <span class="delete-button-text">Delete</span>    
-                        </button>
-                    </li>
-                    <li class="todo-thing" aria-label="Todo - CSS">
-                        <input type="checkbox" class="done-checkbox" id="checkbox-2" aria-label="Mark 'CSS' as done">
-                        <label for="checkbox-2" class="checkbox-image"></label>
-                        <span class="todo-thing-string">
-                            CSS 
-                        </span>
-                        <button class="delete-button" lang="en" aria-label="Delete 'CSS' task">
-                        <span class="delete-button-text">Delete</span>    
-                        </button>
-                    </li>
-                    <li class="todo-thing" aria-label="Todo - JS">
-                        <input type="checkbox" class="done-checkbox" id="checkbox-3" aria-label="Mark 'JS' as done">
-                        <label for="checkbox-3" class="checkbox-image"></label>
-                            JS
-                        </span>
-                        <button class="delete-button" lang="en" aria-label="Delete 'JS' task">
-                        <span class="delete-button-text">Delete</span>    
-                        </button>
-                    </li>
-                    <li class="todo-thing" aria-label="Todo - JS tools">
-                        <input type="checkbox" class="done-checkbox" id="checkbox-4" aria-label="Mark 'JS tools' as done">
-                        <label for="checkbox-4" class="checkbox-image"></label>
-                        <span class="todo-thing-string">
-                            JS tools
-                        </span>
-                        <button class="delete-button" lang="en" aria-label="Delete 'JS tools' task">
-                        <span class="delete-button-text">Delete</span>    
-                        </button>
-                    </li>
-                </ul>
-            </main>
-            <footer class="box-footer">
-                <span class="footer-sign">
-                    3 items left
-                </span>
-                <span class="selector" role="tablist" aria-label="Select what tasks to show">
-                    <input 
-                        type="radio" 
-                        role="tab"
-                        name="tasks-selector-radio"
-                        value="all"
-                        checked="checked"
-                        aria-label="Show all task"
-                        id="radio-all"> 
-                    <label for="radio-all" class="radio-label">All</label>
-                    <input
-                        type="radio"
-                        role="tab"
-                        name="tasks-selector-radio"
-                        value="active"
-                        aria-label="Show only active tasks"
-                        id="radio-active">
-                    <label for="radio-active" class="radio-label">Active</label>
-                    <input 
-                        type="radio"
-                        role="tab"
-                        name="tasks-selector-radio"
-                        value="completed"
-                        aria-label="Show only completed tasks"
-                        id="radio-completed">
-                    <label for="radio-completed" class="radio-label">Completed</label>
-                </span>
-                <button class="clear-button" aria-label="Delete all completed tasks">
-                    Clear completed
-                </button>
-            </footer>
-        </div>
-        <div class="second-sheet"></div>
-        <div class="third-sheet"></div>
-    </body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Test</title>
+  </head>
+  <body>
+    <h1>todos</h1>
+    <div class="main-box">
+      <header class="box-header">
+        <button class="check-button" aria-label="Mark everything as done">
+          <span class="check-button-sign"> Check all </span>
+        </button>
+        <input
+          placeholder="What needs to be done"
+          class="main-input"
+          aria-label="Input what to do"
+        />
+      </header>
+      <main>
+        <ul class="todo-list" lang="ru" aria-label="List of things to do">
+          <li class="todo-thing" aria-label="Todo - HTML">
+            <input
+              type="checkbox"
+              class="done-checkbox"
+              id="checkbox-1"
+              aria-label="Mark 'HTML' as done"
+            />
+            <label for="checkbox-1" class="checkbox-image"></label>
+            <span class="todo-thing-string"> HTML </span>
+            <button
+              class="delete-button"
+              lang="en"
+              aria-label="Delete 'HTML' task"
+            >
+              <span class="delete-button-text">Delete</span>
+            </button>
+          </li>
+          <li class="todo-thing" aria-label="Todo - CSS">
+            <input
+              type="checkbox"
+              class="done-checkbox"
+              id="checkbox-2"
+              aria-label="Mark 'CSS' as done"
+            />
+            <label for="checkbox-2" class="checkbox-image"></label>
+            <span class="todo-thing-string"> CSS </span>
+            <button
+              class="delete-button"
+              lang="en"
+              aria-label="Delete 'CSS' task"
+            >
+              <span class="delete-button-text">Delete</span>
+            </button>
+          </li>
+          <li class="todo-thing" aria-label="Todo - JS">
+            <input
+              type="checkbox"
+              class="done-checkbox"
+              id="checkbox-3"
+              aria-label="Mark 'JS' as done"
+            />
+            <label for="checkbox-3" class="checkbox-image"></label>
+            <span class="todo-thing-string"> JS </span>
+            <button
+              class="delete-button"
+              lang="en"
+              aria-label="Delete 'JS' task"
+            >
+              <span class="delete-button-text">Delete</span>
+            </button>
+          </li>
+          <li class="todo-thing" aria-label="Todo - JS tools">
+            <input
+              type="checkbox"
+              class="done-checkbox"
+              id="checkbox-4"
+              aria-label="Mark 'JS tools' as done"
+            />
+            <label for="checkbox-4" class="checkbox-image"></label>
+            <span class="todo-thing-string"> JS tools </span>
+            <button
+              class="delete-button"
+              lang="en"
+              aria-label="Delete 'JS tools' task"
+            >
+              <span class="delete-button-text">Delete</span>
+            </button>
+          </li>
+        </ul>
+      </main>
+      <footer class="box-footer">
+        <span class="footer-sign"> 3 items left </span>
+        <span
+          class="selector"
+          role="tablist"
+          aria-label="Select what tasks to show"
+        >
+          <input
+            type="radio"
+            role="tab"
+            name="tasks-selector-radio"
+            value="all"
+            checked="checked"
+            aria-label="Show all task"
+            id="radio-all"
+          />
+          <label for="radio-all" class="radio-label">All</label>
+          <input
+            type="radio"
+            role="tab"
+            name="tasks-selector-radio"
+            value="active"
+            aria-label="Show only active tasks"
+            id="radio-active"
+          />
+          <label for="radio-active" class="radio-label">Active</label>
+          <input
+            type="radio"
+            role="tab"
+            name="tasks-selector-radio"
+            value="completed"
+            aria-label="Show only completed tasks"
+            id="radio-completed"
+          />
+          <label for="radio-completed" class="radio-label">Completed</label>
+        </span>
+        <button class="clear-button" aria-label="Delete all completed tasks">
+          Clear completed
+        </button>
+      </footer>
+    </div>
+    <div class="second-sheet"></div>
+    <div class="third-sheet"></div>
+  </body>
 </html>
