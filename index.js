@@ -11,7 +11,9 @@ let mainInputForm = document.querySelector("[class='main-input-form']");
 let mainInput = document.querySelector("[class='main-input']");
 let todoList = document.querySelector("[class='todo-list']");
 let leftCounter = document.querySelector("[class='footer-sign']");
-let filterSelectors = document.querySelectorAll("[name='tasks-selector-radio']")
+let filterSelectors = document.querySelectorAll("[name='tasks-selector-radio']");
+let checkButton = document.querySelector("[class='check-button']");
+let clearCompletedButton = document.querySelector("[class='clear-button']");
 
 for (selector of filterSelectors) {
 	if (selector.checked) {
@@ -60,6 +62,24 @@ function changeFilter(e) {
 for (selector of filterSelectors) {
 	selector.addEventListener('click', changeFilter);
 }
+
+
+function markEverythingAsCompleted() {
+	for (todo of todos) {
+		todo.isActive = false;
+	}
+	rerenderTodos();
+	updateLeftCounter();
+}
+
+checkButton.addEventListener('click', markEverythingAsCompleted)
+
+function clearAllCompleted() {
+	todos = todos.filter((value, index, arr) => value.isActive == true);
+	rerenderTodos();
+}
+
+clearCompletedButton.addEventListener('click', clearAllCompleted)
 
 function rerenderTodos() {
 	while (todoList.firstChild) {
