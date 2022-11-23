@@ -35,7 +35,6 @@ function addTodo(e) {
   const todo = newTodo(mainInput.value);
   mainInput.value = "";
   todos.push(todo);
-  console.log(todos);
   if (filterMode != filterModes.Completed) {
     todoList.appendChild(createNodeOfTodo(todo));
   }
@@ -56,7 +55,6 @@ function changeFilter(e) {
   if (id == "radio-completed") {
     filterMode = filterModes.Completed;
   }
-  console.log(filterMode);
   rerenderTodos();
 }
 
@@ -123,7 +121,6 @@ function remarkToDo(e) {
     e.target.parentNode.remove();
   }
   updateLeftCounter();
-  console.log(todos);
 }
 
 function deleteToDo(e) {
@@ -131,8 +128,6 @@ function deleteToDo(e) {
   let id = todoNode.getAttribute("id").split("-")[2];
   let indexToDelete = 0;
   todos = todos.filter((value, index, arr) => value.rndID != id);
-  console.log(indexToDelete);
-  console.log(todos);
   todoNode.remove();
   updateLeftCounter();
 }
