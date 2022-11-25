@@ -11,9 +11,8 @@ let mainInputForm = document.querySelector("[class='main-input-form']");
 let mainInput = document.querySelector("[class='main-input']");
 let todoList = document.querySelector("[class='todo-list']");
 let leftCounter = document.querySelector("[class='footer-sign']");
-let filterSelectors = document.querySelectorAll(
-  "[name='tasks-selector-radio']"
-);
+let filterSelectors = document.querySelectorAll("[name='tasks-selector-radio']");
+let filterSelector = document.querySelector("[class='selector']");
 let checkButton = document.querySelector("[class='check-button']");
 let clearCompletedButton = document.querySelector("[class='clear-button']");
 
@@ -45,6 +44,10 @@ function addTodo(e) {
 mainInputForm.addEventListener("submit", addTodo);
 
 function changeFilter(e) {
+  if (e.target.nodeName != "INPUT") {
+    return;
+  }
+  console.log(e.target.nodeName)
   id = e.target.id;
   if (id == "radio-all") {
     filterMode = filterModes.All;
@@ -58,9 +61,13 @@ function changeFilter(e) {
   rerenderTodos();
 }
 
-for (selector of filterSelectors) {
-  selector.addEventListener("click", changeFilter);
-}
+// for (selector of filterSelectors) {
+//   selector.addEventListener("click", changeFilter);
+// }
+
+
+filterSelector.addEventListener("click", changeFilter);
+
 
 function markEverythingAsCompleted() {
   for (todo of todos) {
