@@ -61,11 +61,6 @@ function changeFilter(e) {
   rerenderTodos();
 }
 
-// for (selector of filterSelectors) {
-//   selector.addEventListener("click", changeFilter);
-// }
-
-
 filterSelector.addEventListener("click", changeFilter);
 
 
@@ -116,28 +111,38 @@ function updateLeftCounter() {
 }
 
 function remarkToDo(e) {
-  id = e.target.getAttribute("id").split("-")[1];
-  for (todo of todos) {
-    if (todo.rndID == id) {
-      todo.isActive = !e.target.checked;
-      break;
+  if (e.target.getAttribute("class") == "done-checkbox") {
+    id = e.target.getAttribute("id").split("-")[1];
+    for (todo of todos) {
+      if (todo.rndID == id) {
+        todo.isActive = !e.target.checked;
+        break;
+      }
     }
-  }
 
-  if (!isInFilter(todo)) {
-    e.target.parentNode.remove();
+    if (!isInFilter(todo)) {
+      e.target.parentNode.remove();
+    }
+    updateLeftCounter();
   }
-  updateLeftCounter();
 }
+
+todoList.addEventListener('click', remarkToDo)
+
 
 function deleteToDo(e) {
-  todoNode = e.target.parentNode;
-  let id = todoNode.getAttribute("id").split("-")[2];
-  let indexToDelete = 0;
-  todos = todos.filter((value, index, arr) => value.rndID != id);
-  todoNode.remove();
-  updateLeftCounter();
+  if (e.target.getAttribute("class") == "delete-button") {
+    todoNode = e.target.parentNode;
+    let id = todoNode.getAttribute("id").split("-")[2];
+    let indexToDelete = 0;
+    todos = todos.filter((value, index, arr) => value.rndID != id);
+    todoNode.remove();
+    updateLeftCounter();
+  }
 }
+
+todoList.addEventListener('click', deleteToDo)
+
 
 function newTodo(name) {
   return {
@@ -169,7 +174,6 @@ function createCheckboxForTodo(todo) {
     "Mark '" + todo.label + "' as " + (todo.isActive ? "" : "un") + "done"
   );
   ans.checked = !todo.isActive;
-  ans.addEventListener("click", remarkToDo);
   return ans;
 }
 
@@ -191,6 +195,5 @@ function createDeleteButtonForTodo(todo) {
   const ans = document.createElement("button");
   ans.setAttribute("class", "delete-button");
   ans.setAttribute("aria-label", "Delete '" + todo.label + "' task");
-  ans.addEventListener("click", deleteToDo);
   return ans;
 }
