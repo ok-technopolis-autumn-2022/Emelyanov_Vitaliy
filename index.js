@@ -47,7 +47,6 @@ function changeFilter(e) {
   if (e.target.nodeName != "INPUT") {
     return;
   }
-  console.log(e.target.nodeName)
   id = e.target.id;
   if (id == "radio-all") {
     filterMode = filterModes.All;
