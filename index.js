@@ -44,7 +44,7 @@ function addTodo(e) {
 mainInputForm.addEventListener("submit", addTodo);
 
 function changeFilter(e) {
-  if (e.target.nodeName != "INPUT") {
+  if (e.target.className != "tasks-selector-radio") {
     return;
   }
   id = e.target.id;
@@ -110,7 +110,7 @@ function updateLeftCounter() {
 }
 
 function remarkToDo(e) {
-  if (e.target.getAttribute("class") == "done-checkbox") {
+  if (e.target.className == "done-checkbox") {
     id = e.target.getAttribute("id").split("-")[1];
     for (todo of todos) {
       if (todo.rndID == id) {
