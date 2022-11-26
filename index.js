@@ -111,7 +111,7 @@ function updateLeftCounter() {
 
 function remarkToDo(e) {
   if (e.target.className == "done-checkbox") {
-    id = e.target.getAttribute("id").split("-")[1];
+    id = e.target.id.split("-")[1];
     for (todo of todos) {
       if (todo.rndID == id) {
         todo.isActive = !e.target.checked;
@@ -130,9 +130,9 @@ todoList.addEventListener('click', remarkToDo)
 
 
 function deleteToDo(e) {
-  if (e.target.getAttribute("class") == "delete-button") {
+  if (e.target.className == "delete-button") {
     todoNode = e.target.parentNode;
-    let id = todoNode.getAttribute("id").split("-")[2];
+    let id = todoNode.id.split("-")[2];
     let indexToDelete = 0;
     todos = todos.filter((value, index, arr) => value.rndID != id);
     todoNode.remove();
