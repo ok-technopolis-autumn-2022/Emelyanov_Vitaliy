@@ -69,8 +69,17 @@ h1 {
   font-weight: 300;
   font-size: 24px;
   line-height: 21px;
-  box-shadow: inset 0px -1px 0px #e6e6e6;
+  padding-top: auto;
   border: none;
+}
+
+.main-input-form {
+  box-shadow: inset 0px -1px 0px #e6e6e6;
+  margin: 0;
+  padding: 0;
+  height: 64px;
+  display: flex;
+  border: 0;
 }
 
 ul {
@@ -139,7 +148,7 @@ li:hover .delete-button {
   display: none;
 }
 
-input[type=checkbox]:checked + .checkbox-image {
+input[type="checkbox"]:checked + .checkbox-image {
   background-image: url("../static/completed@2x.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -149,20 +158,20 @@ input[type=checkbox]:checked + .checkbox-image {
   border: 1px solid #5dc2af;
 }
 
-input[type=checkbox]:hover + .checkbox-image {
+input[type="checkbox"]:hover + .checkbox-image {
   border: 1px solid #ccc;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   appearance: none;
   margin: 0px;
 }
 
-input[type=radio] {
+input[type="radio"] {
   appearance: none;
 }
 
-input[type=radio]:checked + .radio-label {
+input[type="radio"]:checked + .radio-label {
   border: 1px solid #ebdfdf;
   /*display: none;*/
   /*appearance: none;*/

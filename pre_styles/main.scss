@@ -73,9 +73,18 @@ h1 {
   font-weight: 300;
   font-size: 24px;
   line-height: 21px;
-  box-shadow: inset 0px -1px 0px #e6e6e6;
+  padding-top: auto;
 
   border: none;
+}
+
+.main-input-form {
+  box-shadow: inset 0px -1px 0px #e6e6e6;
+  margin: 0;
+  padding: 0;
+  height: 64px;
+  display: flex;
+  border: 0;
 }
 
 ul {
